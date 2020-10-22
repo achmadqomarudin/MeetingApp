@@ -12,6 +12,12 @@ Repo to demonstrate Meeting App in Android app. This is a follow up on the youtu
 
 [AndroidVideoMeeting](https://www.youtube.com/playlist?list=PLam6bY5NszYNR54PiY_NN7hGS858xinq-)
 
+# Instruction
+
+- How to Setup Firebase Cloud Messaging & Firestore? ([tutorial](https://youtu.be/P54aEc4QYzI))
+- How to Change "API_KEY_SERVER" in "Constants.java" Class with your api key server? ([tutorial](https://youtu.be/cQkuWMB_9SY?list=PLam6bY5NszYNR54PiY_NN7hGS858xinq-&t=208))
+- Still confused? Check out this complete video tutorial for step by step from the beginning ([tutorial](https://www.youtube.com/playlist?list=PLam6bY5NszYNR54PiY_NN7hGS858xinq-))
+
 # Demo App
 
 <p align="center">
