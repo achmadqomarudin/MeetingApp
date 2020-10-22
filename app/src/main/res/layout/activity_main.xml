@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/ubuntu_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorTextIcons"
+            android:textSize="@dimen/_16ssp" />
+
+        <TextView
+            android:id="@+id/textSignOut"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/ubuntu_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/sign_out"
+            android:textColor="@color/colorTextIcons"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewUsers"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="@dimen/_5sdp"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/textErrorMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/ubuntu_regular"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader" />
+
+    <ImageView
+        android:id="@+id/imageConference"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_conference"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/colorPrimary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
