@@ -88,9 +88,9 @@ public class SignUpActivity extends AppCompatActivity {
                     startActivity(intent);
                 })
                 .addOnFailureListener(e -> {
-                    signUpProgress.setVisibility(View.INVISIBLE);
                     buttonSignUp.setVisibility(View.VISIBLE);
-                    Toast.makeText(SignUpActivity.this, "Error: "+ e.getMessage(), Toast.LENGTH_SHORT).show();
+                    signUpProgress.setVisibility(View.INVISIBLE);
+                    Toast.makeText(SignUpActivity.this, "Error woi : "+ e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }
 }
